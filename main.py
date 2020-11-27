@@ -55,7 +55,8 @@ class TempBot:
 		sleep(5)
 		self.driver.quit()
 
-NUSnetID = input("Please enter your NUSNetID (please enter 'nusstu\\' at the front): ")
+NUSnetID = input("Please enter your NUSNetID: ")
+fullUser = "nusstu\\" + NUSnetID
 password = input("And your password: ")
-temp_bot = TempBot(NUSnetID,password)
+temp_bot = TempBot(fullUser,password)
 temp_bot.decl_temp()
